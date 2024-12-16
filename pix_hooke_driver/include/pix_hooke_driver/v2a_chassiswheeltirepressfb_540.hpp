@@ -19,7 +19,7 @@
 
 class V2achassiswheeltirepressfb540 {
 public:
-    static const uint32_t ID = 0x540;
+    static constexpr uint32_t ID = 0x540;
     V2achassiswheeltirepressfb540();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

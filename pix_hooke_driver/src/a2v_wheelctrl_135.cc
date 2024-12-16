@@ -14,7 +14,6 @@
 
 #include <pix_hooke_driver/a2v_wheelctrl_135.hpp>
 
-int32_t A2vwheelctrl135::ID = 0x135;
 
 // public
 A2vwheelctrl135::A2vwheelctrl135() { Reset(); }

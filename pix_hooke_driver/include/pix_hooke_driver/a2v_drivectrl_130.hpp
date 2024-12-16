@@ -17,7 +17,7 @@
 
 class A2vdrivectrl130 {
 public:
-	static  int32_t ID;
+	static constexpr int32_t ID = 0x130; 
 
 	A2vdrivectrl130();
 

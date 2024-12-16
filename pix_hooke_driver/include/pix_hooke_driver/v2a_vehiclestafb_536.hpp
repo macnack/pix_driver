@@ -19,7 +19,7 @@
 
 class V2avehiclestafb536 {
 public:
-    static const uint32_t ID = 0x536;
+    static constexpr uint32_t ID = 0x536;
     V2avehiclestafb536();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

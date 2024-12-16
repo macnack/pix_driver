@@ -19,7 +19,7 @@
 
 class V2achassiswheelrpmfb539 {
 public:
-    static const uint32_t ID = 0x539;
+    static constexpr uint32_t ID = 0x539;
     V2achassiswheelrpmfb539();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

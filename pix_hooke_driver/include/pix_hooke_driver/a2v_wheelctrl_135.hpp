@@ -17,7 +17,7 @@
 
 class A2vwheelctrl135 {
 public:
-	static  int32_t ID;
+	static constexpr int32_t ID = 0x135;
 
 	A2vwheelctrl135();
 

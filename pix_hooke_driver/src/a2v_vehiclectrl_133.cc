@@ -14,7 +14,6 @@
 
 #include <pix_hooke_driver/a2v_vehiclectrl_133.hpp>
 
-int32_t A2vvehiclectrl133::ID = 0x133;
 
 // public
 A2vvehiclectrl133::A2vvehiclectrl133() { Reset(); }

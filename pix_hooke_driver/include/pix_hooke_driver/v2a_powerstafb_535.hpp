@@ -19,7 +19,7 @@
 
 class V2apowerstafb535 {
 public:
-    static const uint32_t ID = 0x535;
+    static constexpr uint32_t ID = 0x535;
     V2apowerstafb535();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

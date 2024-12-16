@@ -19,7 +19,7 @@
 
 class V2adrivestafb530 {
 public:
-  static const uint32_t ID = 0x530;
+  static constexpr uint32_t ID = 0x530;
   V2adrivestafb530();
   void Parse();
   void update_bytes(uint8_t bytes_data[8]);

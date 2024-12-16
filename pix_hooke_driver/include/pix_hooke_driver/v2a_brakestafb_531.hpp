@@ -19,7 +19,7 @@
 
 class V2abrakestafb531 {
 public:
-    static const uint32_t ID = 0x531;
+    static constexpr uint32_t ID = 0x531;
     V2abrakestafb531();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

@@ -14,7 +14,6 @@
 
 #include <pix_hooke_driver/a2v_steerctrl_132.hpp>
 
-int32_t A2vsteerctrl132::ID = 0x132;
 
 // public
 A2vsteerctrl132::A2vsteerctrl132() { Reset(); }

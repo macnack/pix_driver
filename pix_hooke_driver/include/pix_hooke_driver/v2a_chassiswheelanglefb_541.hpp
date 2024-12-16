@@ -19,7 +19,7 @@
 
 class V2achassiswheelanglefb541 {
 public:
-    static const uint32_t ID = 0x541;
+    static constexpr uint32_t ID = 0x541;
     V2achassiswheelanglefb541();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

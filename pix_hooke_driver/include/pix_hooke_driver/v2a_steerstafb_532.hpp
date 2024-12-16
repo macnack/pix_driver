@@ -19,7 +19,7 @@
 
 class V2asteerstafb532 {
 public:
-    static const uint32_t ID = 0x532;
+    static constexpr uint32_t ID = 0x532;
     V2asteerstafb532();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);

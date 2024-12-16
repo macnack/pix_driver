@@ -14,7 +14,6 @@
 
 #include <pix_hooke_driver/a2v_drivectrl_130.hpp>
 
-int32_t A2vdrivectrl130::ID = 0x130;
 
 // public
 A2vdrivectrl130::A2vdrivectrl130() { Reset(); }

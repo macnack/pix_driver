@@ -17,7 +17,7 @@
 
 class A2vsteerctrl132 {
 public:
-	static  int32_t ID;
+	static constexpr int32_t ID = 0x132;
 
 	A2vsteerctrl132();
 

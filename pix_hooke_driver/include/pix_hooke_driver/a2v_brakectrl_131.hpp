@@ -17,7 +17,7 @@
 
 class A2vbrakectrl131 {
 public:
-	static  int32_t ID;
+  static constexpr int32_t ID = 0x131;
 
 	A2vbrakectrl131();
 

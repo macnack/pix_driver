@@ -14,7 +14,6 @@
 
 #include <pix_hooke_driver/a2v_brakectrl_131.hpp>
 
-int32_t A2vbrakectrl131::ID = 0x131;
 
 // public
 A2vbrakectrl131::A2vbrakectrl131() { Reset(); }

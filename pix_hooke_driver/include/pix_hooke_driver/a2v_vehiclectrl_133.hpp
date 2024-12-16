@@ -17,7 +17,7 @@
 
 class A2vvehiclectrl133 {
 public:
-	static  int32_t ID;
+	static constexpr int32_t ID = 0x133;
 
 	A2vvehiclectrl133();
 

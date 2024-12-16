@@ -19,7 +19,7 @@
 
 class V2avehiclefltsta537 {
 public:
-    static const uint32_t ID = 0x537;
+    static constexpr uint32_t ID = 0x537;
     V2avehiclefltsta537();
     void Parse();
     void update_bytes(uint8_t bytes_data[8]);
