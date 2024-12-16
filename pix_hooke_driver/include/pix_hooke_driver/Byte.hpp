@@ -21,10 +21,18 @@ private:
     uint8_t byte_t;
 
 public:
-    Byte(std::uint8_t byte);
-    ~Byte();
+    Byte(std::uint8_t byte) noexcept;
+    ~Byte() noexcept;
 
-    uint8_t return_byte_t();
-    int32_t get_byte(uint start, uint end);
-    void set_value(uint8_t value, uint start, uint len);
+    uint8_t return_byte_t() noexcept;
+    inline int32_t get_byte(uint start, uint len) noexcept
+    {
+      uint8_t mask = (1 << len) - 1;
+      return static_cast<int32_t>((byte_t >> start) & mask);
+    }
+    inline void set_value(uint8_t value, uint start, uint len) noexcept
+    {
+      uint8_t mask = ((1 << len) - 1) << start;
+      byte_t = (byte_t & ~mask) | ((value << start) & mask);
+    }
 };
