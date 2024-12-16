@@ -71,13 +71,13 @@ void A2vbrakectrl131::set_p_acu_chassisbrakepdltarget(double acu_chassisbrakepdl
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[1] += to_set0.return_byte_t();
+  data[1] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0x3;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 2);
-  data[2] += to_set1.return_byte_t();
+  data[2] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 24, 'description': '驻车控制', 'enum': {0: 'ACU_CHASSISEPBCTRL_DEFAULT', 1: 'ACU_CHASSISEPBCTRL_BRAKE', 2: 'ACU_CHASSISEPBCTRL_RELEASE'}, 'is_signed_var': False, 'len': 2, 'name': 'ACU_ChassisEpbCtrl', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|3]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
@@ -87,7 +87,7 @@ void A2vbrakectrl131::set_p_acu_chassisepbctrl(int acu_chassisepbctrl) {
 
   Byte to_set(a);
   to_set.set_value(x, 0, 2);
-  data[3] += to_set.return_byte_t();
+  data[3] = to_set.return_byte_t();
   
 }
 
@@ -99,7 +99,7 @@ void A2vbrakectrl131::set_p_acu_brakelifesig(int acu_brakelifesig) {
 
   Byte to_set(a);
   to_set.set_value(x, 0, 4);
-  data[6] += to_set.return_byte_t();
+  data[6] = to_set.return_byte_t();
   
 }
 
@@ -111,7 +111,7 @@ void A2vbrakectrl131::set_p_acu_checksum_131(int acu_checksum_131) {
 
   Byte to_set(a);
   to_set.set_value(x, 0, 8);
-  data[7] += to_set.return_byte_t();
+  data[7] = to_set.return_byte_t();
   
 }
 

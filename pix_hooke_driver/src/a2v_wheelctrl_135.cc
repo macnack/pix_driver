@@ -47,13 +47,13 @@ void A2vwheelctrl135::set_p_acu_motortorquelfctrl(double acu_motortorquelfctrl) 
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[0] += to_set0.return_byte_t();
+  data[0] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0xFF;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 8);
-  data[1] += to_set1.return_byte_t();
+  data[1] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 16, 'description': '右前电机扭矩', 'is_signed_var': True, 'len': 16, 'name': 'ACU_MotorTorqueRfCtrl', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-200|200]', 'physical_unit': 'Nm', 'precision': 0.1, 'type': 'double'}
@@ -66,13 +66,13 @@ void A2vwheelctrl135::set_p_acu_motortorquerfctrl(double acu_motortorquerfctrl) 
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[2] += to_set0.return_byte_t();
+  data[2] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0xFF;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 8);
-  data[3] += to_set1.return_byte_t();
+  data[3] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 32, 'description': '左后电机扭矩', 'is_signed_var': True, 'len': 16, 'name': 'ACU_MotorTorqueLrCtrl', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-200|200]', 'physical_unit': 'Nm', 'precision': 0.1, 'type': 'double'}
@@ -85,13 +85,13 @@ void A2vwheelctrl135::set_p_acu_motortorquelrctrl(double acu_motortorquelrctrl) 
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[4] += to_set0.return_byte_t();
+  data[4] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0xFF;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 8);
-  data[5] += to_set1.return_byte_t();
+  data[5] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 48, 'description': '右后电机扭矩', 'is_signed_var': True, 'len': 16, 'name': 'ACU_MotorTorqueRrCtrl', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-200|200]', 'physical_unit': 'Nm', 'precision': 0.1, 'type': 'double'}
@@ -104,13 +104,13 @@ void A2vwheelctrl135::set_p_acu_motortorquerrctrl(double acu_motortorquerrctrl) 
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[6] += to_set0.return_byte_t();
+  data[6] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0xFF;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 8);
-  data[7] += to_set1.return_byte_t();
+  data[7] = to_set1.return_byte_t();
 }
 
 

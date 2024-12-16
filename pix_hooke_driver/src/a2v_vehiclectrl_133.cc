@@ -184,7 +184,7 @@ void A2vvehiclectrl133::set_p_acu_vehiclewindowctrl(int acu_vehiclewindowctrl) {
   t = x & 0x1;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 1);
-  data[2] += to_set1.return_byte_t();
+  data[2] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 24, 'description': '限速控制', 'enum': {0: 'ACU_CHASSISSPEEDLIMITEMODE_DEFAULT', 1: 'ACU_CHASSISSPEEDLIMITEMODE_LIMIT'}, 'is_signed_var': False, 'len': 1, 'name': 'ACU_ChassisSpeedLimiteMode', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|1]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
@@ -194,7 +194,7 @@ void A2vvehiclectrl133::set_p_acu_chassisspeedlimitemode(int acu_chassisspeedlim
 
   Byte to_set(a);
   to_set.set_value(x, 0, 1);
-  data[3] += to_set.return_byte_t();
+  data[3] = to_set.return_byte_t();
   
 }
 
@@ -208,13 +208,13 @@ void A2vvehiclectrl133::set_p_acu_chassisspeedlimiteval(int acu_chassisspeedlimi
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[4] += to_set0.return_byte_t();
+  data[4] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0xFF;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 8);
-  data[5] += to_set1.return_byte_t();
+  data[5] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 48, 'description': '校验模式使能(预留)', 'enum': {0: 'ACU_CHECKSUMEN_ENABLE', 1: 'ACU_CHECKSUMEN_DISABLE'}, 'is_signed_var': False, 'len': 1, 'name': 'ACU_CheckSumEn', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|1]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
@@ -224,7 +224,7 @@ void A2vvehiclectrl133::set_p_acu_checksumen(int acu_checksumen) {
 
   Byte to_set(a);
   to_set.set_value(x, 0, 1);
-  data[6] += to_set.return_byte_t();
+  data[6] = to_set.return_byte_t();
   
 }
 

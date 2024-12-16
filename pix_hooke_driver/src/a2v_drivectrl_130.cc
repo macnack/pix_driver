@@ -83,13 +83,13 @@ void A2vdrivectrl130::set_p_acu_chassisspeedctrl(double acu_chassisspeedctrl) {
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[1] += to_set0.return_byte_t();
+  data[1] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0xFF;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 8);
-  data[2] += to_set1.return_byte_t();
+  data[2] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 24, 'description': '车辆油门控制', 'is_signed_var': False, 'len': 10, 'name': 'ACU_ChassisThrottlePdlTarget', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|100]', 'physical_unit': '%', 'precision': 0.1, 'type': 'double'}
@@ -102,13 +102,13 @@ void A2vdrivectrl130::set_p_acu_chassisthrottlepdltarget(double acu_chassisthrot
   t = x & 0xFF;
   Byte to_set0(a);
   to_set0.set_value(t, 0, 8);
-  data[3] += to_set0.return_byte_t();
+  data[3] = to_set0.return_byte_t();
   x >>= 8;
 
   t = x & 0x3;
   Byte to_set1(a);
   to_set1.set_value(t, 0, 2);
-  data[4] += to_set1.return_byte_t();
+  data[4] = to_set1.return_byte_t();
 }
 
 // config detail: {'bit': 48, 'description': '循环计数0~15', 'is_signed_var': False, 'len': 4, 'name': 'ACU_DriveLifeSig', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|15]', 'physical_unit': '', 'precision': 1.0, 'type': 'int'}
@@ -119,7 +119,7 @@ void A2vdrivectrl130::set_p_acu_drivelifesig(int acu_drivelifesig) {
 
   Byte to_set(a);
   to_set.set_value(x, 0, 4);
-  data[6] += to_set.return_byte_t();
+  data[6] = to_set.return_byte_t();
   
 }
 
@@ -131,7 +131,7 @@ void A2vdrivectrl130::set_p_acu_checksum_130(int acu_checksum_130) {
 
   Byte to_set(a);
   to_set.set_value(x, 0, 8);
-  data[7] += to_set.return_byte_t();
+  data[7] = to_set.return_byte_t();
   
 }
 
