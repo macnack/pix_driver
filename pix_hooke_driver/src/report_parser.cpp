@@ -106,10 +106,7 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
   case V2adrivestafb530::ID:
     drive_sta_fb_received_time_ = this->now();
     
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_drivestafb_530_entity_.update_bytes(byte_temp);
     v2a_drivestafb_530_entity_.Parse();
 
@@ -130,10 +127,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2abrakestafb531::ID:
     brake_sta_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+    
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_brakestafb_531_entity_.update_bytes(byte_temp);
     v2a_brakestafb_531_entity_.Parse();
 
@@ -148,10 +143,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break; 
   case V2asteerstafb532::ID:
     steer_sta_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_steerstafb_532_entity_.update_bytes(byte_temp);
     v2a_steerstafb_532_entity_.Parse();
     steer_sta_fb_msg.header = header;
@@ -166,10 +159,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2avehicleworkstafb534::ID:
     vehicle_work_sta_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_vehicleworkstafb_534_entity_.update_bytes(byte_temp);
     v2a_vehicleworkstafb_534_entity_.Parse();
     vehicle_work_sta_fb_msg.header = header;
@@ -192,10 +183,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2apowerstafb535::ID:
     power_sta_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_powerstafb_535_entity_.update_bytes(byte_temp);
     v2a_powerstafb_535_entity_.Parse();
     power_sta_fb_msg.header = header;
@@ -211,10 +200,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2avehiclestafb536::ID:
     vehicle_sta_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+    
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_vehiclestafb_536_entity_.update_bytes(byte_temp);
     v2a_vehiclestafb_536_entity_.Parse();
     vehicle_sta_fb_msg.header = header;
@@ -238,10 +225,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2avehiclefltsta537::ID:
     vehicle_flt_sta_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_vehiclefltsta_537_entity_.update_bytes(byte_temp);
     v2a_vehiclefltsta_537_entity_.Parse();
     vehicle_flt_sta_msg.header = header;
@@ -265,10 +250,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2achassiswheelrpmfb539::ID:
     chassis_wheel_rpm_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+    
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_chassiswheelrpmfb_539_entity_.update_bytes(byte_temp);
     v2a_chassiswheelrpmfb_539_entity_.Parse();
     chassis_wheel_rpm_fb_msg.header = header;
@@ -281,10 +264,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2achassiswheeltirepressfb540::ID:
     chassis_wheel_tire_press_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_chassiswheeltirepressfb_540_entity_.update_bytes(byte_temp);
     v2a_chassiswheeltirepressfb_540_entity_.Parse();
     chassis_wheel_tire_press_fb_msg.header = header;
@@ -296,10 +277,8 @@ void ReportParser::callbackCan(const can_msgs::msg::Frame::ConstSharedPtr & msg)
     break;
   case V2achassiswheelanglefb541::ID:
     chassis_wheel_angle_fb_received_time_ = this->now();
-    for(uint i=0;i<8;i++)
-    {
-    byte_temp[i] = msg->data[i];
-    }
+
+    std::memcpy(byte_temp, msg->data.data(), 8);
     v2a_chassiswheelanglefb_541_entity_.update_bytes(byte_temp);
     v2a_chassiswheelanglefb_541_entity_.Parse();
     chassis_wheel_angle_fb_msg.header = header;

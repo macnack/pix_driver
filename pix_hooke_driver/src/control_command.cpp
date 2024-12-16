@@ -88,13 +88,8 @@ void ControlCommand::callbackBrakeCtrl(const A2vBrakeCtrl::ConstSharedPtr & msg)
   brake_ctrl_can_msg.dlc = 8;
   brake_ctrl_can_msg.id = a2v_brakectrl_131_entity_.ID;
   brake_ctrl_can_msg.is_extended = false;
-  uint8_t *signal_bits;
-  signal_bits = a2v_brakectrl_131_entity_.get_data();
-  for (int i = 0; i < 8; i++)
-  {
-    brake_ctrl_can_msg.data[i] = *signal_bits;
-    signal_bits += 1;
-  }
+  uint8_t *signal_bits = a2v_brakectrl_131_entity_.get_data();
+  std::memcpy(brake_ctrl_can_msg.data.data(), signal_bits, 8);
   brake_ctrl_can_ptr_ = std::make_shared<can_msgs::msg::Frame>(brake_ctrl_can_msg);
 }
 
@@ -112,13 +107,8 @@ void ControlCommand::callbackDriveCtrl(const A2vDriveCtrl::ConstSharedPtr & msg)
   drive_ctrl_can_msg.dlc = 8;
   drive_ctrl_can_msg.id = a2v_drivectrl_130_entity_.ID;
   drive_ctrl_can_msg.is_extended = false;
-  uint8_t *signal_bits;
-  signal_bits = a2v_drivectrl_130_entity_.get_data();
-  for (int i = 0; i < 8; i++)
-  {
-    drive_ctrl_can_msg.data[i] = *signal_bits;
-    signal_bits += 1;
-  }
+  uint8_t *signal_bits = a2v_drivectrl_130_entity_.get_data();
+  std::memcpy(drive_ctrl_can_msg.data.data(), signal_bits, 8);
   drive_ctrl_can_ptr_ = std::make_shared<can_msgs::msg::Frame>(drive_ctrl_can_msg); 
 }
 
@@ -136,13 +126,8 @@ void ControlCommand::callbackSteerCtrl(const A2vSteerCtrl::ConstSharedPtr & msg)
   steer_ctrl_can_msg.dlc = 8;
   steer_ctrl_can_msg.id = a2v_steerctrl_132_entity_.ID;
   steer_ctrl_can_msg.is_extended = false;
-  uint8_t *signal_bits;
-  signal_bits = a2v_steerctrl_132_entity_.get_data();
-  for (int i = 0; i < 8; i++)
-  {
-    steer_ctrl_can_msg.data[i] = *signal_bits;
-    signal_bits += 1;
-  }
+  uint8_t *signal_bits = a2v_steerctrl_132_entity_.get_data();
+  std::memcpy(steer_ctrl_can_msg.data.data(), signal_bits, 8);
   steer_ctrl_can_ptr_ = std::make_shared<can_msgs::msg::Frame>(steer_ctrl_can_msg);
 }
 
@@ -159,13 +144,8 @@ void ControlCommand::callbackWheelCtrl(const A2vWheelCtrl::ConstSharedPtr & msg)
   wheel_ctrl_can_msg.dlc = 8;
   wheel_ctrl_can_msg.id = a2v_wheelctrl_135_entity_.ID;
   wheel_ctrl_can_msg.is_extended = false;
-  uint8_t *signal_bits;
-  signal_bits = a2v_wheelctrl_135_entity_.get_data();
-  for (int i = 0; i < 8; i++)
-  {
-    wheel_ctrl_can_msg.data[i] = *signal_bits;
-    signal_bits += 1;
-  }
+  uint8_t *signal_bits = a2v_wheelctrl_135_entity_.get_data();
+  std::memcpy(wheel_ctrl_can_msg.data.data(), signal_bits, 8);
   wheel_ctrl_can_ptr_ = std::make_shared<can_msgs::msg::Frame>(wheel_ctrl_can_msg);
 }
 void ControlCommand::callbackVehicleCtrl(const A2vVehicleCtrl::ConstSharedPtr & msg)
@@ -186,13 +166,8 @@ void ControlCommand::callbackVehicleCtrl(const A2vVehicleCtrl::ConstSharedPtr & 
   vehicle_ctrl_can_msg.dlc = 8;
   vehicle_ctrl_can_msg.id = a2v_vehiclectrl_133_entity_.ID;
   vehicle_ctrl_can_msg.is_extended = false;
-  uint8_t *signal_bits;
-  signal_bits = a2v_wheelctrl_135_entity_.get_data();
-  for (int i = 0; i < 8; i++)
-  {
-    vehicle_ctrl_can_msg.data[i] = *signal_bits;
-    signal_bits += 1;
-  }
+  uint8_t *signal_bits = a2v_wheelctrl_135_entity_.get_data();
+  std::memcpy(vehicle_ctrl_can_msg.data.data(), signal_bits, 8);
   vehicle_ctrl_can_ptr_ = std::make_shared<can_msgs::msg::Frame>(vehicle_ctrl_can_msg);
 }
 

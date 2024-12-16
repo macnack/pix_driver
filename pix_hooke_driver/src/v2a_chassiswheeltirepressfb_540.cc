@@ -19,10 +19,7 @@ V2achassiswheeltirepressfb540::V2achassiswheeltirepressfb540() {}
 
 void V2achassiswheeltirepressfb540::update_bytes(uint8_t bytes_data[8])
 {
-  for(uint i=0;i<8;i++)
-  {
-    bytes[i] = bytes_data[i];
-  }
+  std::memcpy(bytes, bytes_data, 8);
 }
 
 void V2achassiswheeltirepressfb540::Parse() {

@@ -31,10 +31,7 @@ void A2vdrivectrl130::UpdateData(int acu_chassisdriverenctrl_, int acu_chassisdr
 
 void A2vdrivectrl130::Reset() {
   // TODO(All) :  you should check this manually
-  for(uint8_t i=0;i<8;i++)
-  {
-    data[i] = 0;
-  }
+  std::fill(std::begin(data), std::end(data), 0);
 }
 
 uint8_t * A2vdrivectrl130::get_data()

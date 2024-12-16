@@ -28,10 +28,7 @@ void A2vwheelctrl135::UpdateData(double acu_motortorquelfctrl_, double acu_motor
 
 void A2vwheelctrl135::Reset() {
   // TODO(All) :  you should check this manually
-  for(uint8_t i=0;i<8;i++)
-  {
-    data[i] = 0;
-  }
+  std::fill(std::begin(data), std::end(data), 0);
 }
 
 uint8_t * A2vwheelctrl135::get_data()

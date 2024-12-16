@@ -30,10 +30,7 @@ void A2vbrakectrl131::UpdateData(int acu_chassisbrakeen_, int acu_chassisaebctrl
 
 void A2vbrakectrl131::Reset() {
   // TODO(All) :  you should check this manually
-  for(uint8_t i=0;i<8;i++)
-  {
-    data[i] = 0;
-  }
+  std::fill(std::begin(data), std::end(data), 0);
 }
 
 uint8_t * A2vbrakectrl131::get_data()

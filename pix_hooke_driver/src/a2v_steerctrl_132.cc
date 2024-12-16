@@ -30,10 +30,7 @@ void A2vsteerctrl132::UpdateData(int acu_chassissteerenctrl_, int acu_chassisste
 
 void A2vsteerctrl132::Reset() {
   // TODO(All) :  you should check this manually
-  for(uint8_t i=0;i<8;i++)
-  {
-    data[i] = 0;
-  }
+  std::fill(std::begin(data), std::end(data), 0);
 }
 
 uint8_t * A2vsteerctrl132::get_data()

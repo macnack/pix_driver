@@ -14,7 +14,8 @@
 
 #pragma once
 #include <iostream>
-
+#include <algorithm>
+#include <cstring>
 class Byte
 {
 private:

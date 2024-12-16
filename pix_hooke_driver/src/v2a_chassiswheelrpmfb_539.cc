@@ -19,10 +19,7 @@ V2achassiswheelrpmfb539::V2achassiswheelrpmfb539() {}
 
 void V2achassiswheelrpmfb539::update_bytes(uint8_t bytes_data[8])
 {
-  for(uint i=0;i<8;i++)
-  {
-    bytes[i] = bytes_data[i];
-  }
+  std::memcpy(bytes, bytes_data, 8);
 }
 
 void V2achassiswheelrpmfb539::Parse() {
