@@ -79,11 +79,8 @@ int V2asteerstafb532::VCUChassisSteerAngleFb() {
 
   Byte t1(*(bytes + 1));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = ((x << 8) | t) << 16 >> 16;
 
-  x <<= 16;
-  x >>= 16;
 
   int ret = x;
   return ret;
@@ -96,11 +93,7 @@ int V2asteerstafb532::VCUChassisSteerAngleRearFb() {
 
   Byte t1(*(bytes + 3));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 16;
-  x >>= 16;
+  x = ((x << 8) | t) << 16 >> 16;
 
   int ret = x;
   return ret;

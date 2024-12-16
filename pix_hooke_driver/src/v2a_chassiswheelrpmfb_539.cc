@@ -37,11 +37,7 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmLf() {
 
   Byte t1(*(bytes + 0));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 16;
-  x >>= 16;
+  x = ((x << 8) | t) << 16 >> 16;
 
   int ret = x;
   return ret;
@@ -54,11 +50,7 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmRf() {
 
   Byte t1(*(bytes + 2));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 16;
-  x >>= 16;
+  x = ((x << 8) | t) << 16 >> 16;
 
   int ret = x;
   return ret;
@@ -71,11 +63,7 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmLr() {
 
   Byte t1(*(bytes + 4));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 16;
-  x >>= 16;
+  x = ((x << 8) | t) << 16 >> 16;
 
   int ret = x;
   return ret;
@@ -88,11 +76,7 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmRr() {
 
   Byte t1(*(bytes + 6));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 16;
-  x >>= 16;
+  x = ((x << 8) | t) << 16 >> 16;
 
   int ret = x;
   return ret;

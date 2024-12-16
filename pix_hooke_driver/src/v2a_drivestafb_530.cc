@@ -76,11 +76,8 @@ double V2adrivestafb530::VCUChassisSpeedFb() {
 
   Byte t1(*(bytes + 1));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = ((x << 8) | t) << 16 >> 16;
 
-  x <<= 16;
-  x >>= 16;
 
   double ret = x * 0.010000;
   return ret;
@@ -93,8 +90,7 @@ double V2adrivestafb530::VCUChassisThrottlePaldFb() {
 
   Byte t1(*(bytes + 3));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = (x << 8) | t;
 
   double ret = x * 0.100000;
   return ret;
@@ -107,11 +103,7 @@ double V2adrivestafb530::VCUChassisAccelerationFb() {
 
   Byte t1(*(bytes + 5));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 16;
-  x >>= 16;
+  x = ((x << 8) | t) << 16 >> 16;
 
   double ret = x * 0.010000;
   return ret;

@@ -102,8 +102,7 @@ double V2avehicleworkstafb534::VCUChassisSpeedLimitedValFb() {
 
   Byte t1(*(bytes + 2));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = (x << 8) | t;
 
   double ret = x * 0.100000;
   return ret;

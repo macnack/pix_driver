@@ -37,8 +37,7 @@ double V2achassiswheeltirepressfb540::VCUChassisWheelTirePressLf() {
 
   Byte t1(*(bytes + 0));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = (x << 8) | t;
 
   double ret = x * 0.010000;
   return ret;
@@ -51,8 +50,7 @@ double V2achassiswheeltirepressfb540::VCUChassisWheelTirePressRf() {
 
   Byte t1(*(bytes + 2));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = (x << 8) | t;
 
   double ret = x * 0.010000;
   return ret;
@@ -65,8 +63,7 @@ double V2achassiswheeltirepressfb540::VCUChassisWheelTirePressLr() {
 
   Byte t1(*(bytes + 4));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = (x << 8) | t;
 
   double ret = x * 0.010000;
   return ret;
@@ -79,8 +76,7 @@ double V2achassiswheeltirepressfb540::VCUChassisWheelTirePressRr() {
 
   Byte t1(*(bytes + 6));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
+  x = (x << 8) | t;
 
   double ret = x * 0.010000;
   return ret;

@@ -37,11 +37,7 @@ double V2achassiswheelanglefb541::VCUChassisWheelAngleLf() {
 
   Byte t1(*(bytes + 0));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 20;
-  x >>= 20;
+  x = ((x << 8) | t) << 20 >> 20;
 
   double ret = x * 0.100000;
   return ret;
@@ -54,11 +50,7 @@ double V2achassiswheelanglefb541::VCUChassisWheelAngleRf() {
 
   Byte t1(*(bytes + 2));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 20;
-  x >>= 20;
+  x = ((x << 8) | t) << 20 >> 20;
 
   double ret = x * 0.100000;
   return ret;
@@ -71,11 +63,7 @@ double V2achassiswheelanglefb541::VCUChassisWheelAngleLr() {
 
   Byte t1(*(bytes + 4));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 20;
-  x >>= 20;
+  x = ((x << 8) | t) << 20 >> 20;
 
   double ret = x * 0.100000;
   return ret;
@@ -88,11 +76,7 @@ double V2achassiswheelanglefb541::VCUChassisWheelAngleRr() {
 
   Byte t1(*(bytes + 6));
   int32_t t = t1.get_byte(0, 8);
-  x <<= 8;
-  x |= t;
-
-  x <<= 20;
-  x >>= 20;
+  x = ((x << 8) | t) << 20 >> 20;
 
   double ret = x * 0.100000;
   return ret;
