@@ -24,10 +24,10 @@ public:
   void Parse();
   void update_bytes(uint8_t bytes_data[8]);
   // singal
-  int vcu_chassisdriverensta;
-  int vcu_chassisdiverslopover;
-  int vcu_chassisdrivermodesta;
-  int vcu_chassisgearfb;
+  int8_t vcu_chassisdriverensta;
+  int8_t vcu_chassisdiverslopover;
+  int8_t vcu_chassisdrivermodesta;
+  int8_t vcu_chassisgearfb;
   double vcu_chassisspeedfb;
   double vcu_chassisthrottlepaldfb;
   double vcu_chassisaccelerationfb;
@@ -37,16 +37,16 @@ private:
     uint8_t bytes[8];
     
   // config detail: {'bit': 0, 'description': '驱动使能状态', 'enum': {0: 'VCU_CHASSISDRIVERENSTA_DISABLE', 1: 'VCU_CHASSISDRIVERENSTA_ENABLE'}, 'is_signed_var': False, 'len': 1, 'name': 'VCU_ChassisDriverEnSta', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|1]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-  int VCUChassisDriverEnSta();
+  int8_t VCUChassisDriverEnSta();
 
   // config detail: {'bit': 1, 'description': '驱动控制越界提醒', 'enum': {0: 'VCU_CHASSISDIVERSLOPOVER_NORMAL', 1: 'VCU_CHASSISDIVERSLOPOVER_OVER_SLOP'}, 'is_signed_var': False, 'len': 1, 'name': 'VCU_ChassisDiverSlopover', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|1]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-  int VCUChassisDiverSlopover();
+  int8_t VCUChassisDiverSlopover();
 
   // config detail: {'bit': 2, 'description': '驱动模式反馈', 'enum': {0: 'VCU_CHASSISDRIVERMODESTA_SPEED_CTRL_MODE', 1: 'VCU_CHASSISDRIVERMODESTA_THROTTLE_CTRL_MODE', 2: 'VCU_CHASSISDRIVERMODESTA_RESERVE', 3: 'VCU_CHASSISDRIVERMODESTA_RESERVE'}, 'is_signed_var': False, 'len': 2, 'name': 'VCU_ChassisDriverModeSta', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|3]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-  int VCUChassisDriverModeSta();
+  int8_t VCUChassisDriverModeSta();
 
   // config detail: {'bit': 4, 'description': '档位状态', 'enum': {0: 'VCU_CHASSISGEARFB_NO_USE', 1: 'VCU_CHASSISGEARFB_D', 2: 'VCU_CHASSISGEARFB_N', 3: 'VCU_CHASSISGEARFB_R'}, 'is_signed_var': False, 'len': 2, 'name': 'VCU_ChassisGearFb', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|3]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-  int VCUChassisGearFb();
+  int8_t VCUChassisGearFb();
 
   // config detail: {'bit': 8, 'description': '车速实际反馈', 'is_signed_var': True, 'len': 16, 'name': 'VCU_ChassisSpeedFb', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-50|50]', 'physical_unit': 'm/s', 'precision': 0.01, 'type': 'double'}
   double VCUChassisSpeedFb();

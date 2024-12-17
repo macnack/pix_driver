@@ -34,39 +34,35 @@ void V2adrivestafb530::Parse() {
 
 
 // config detail: {'bit': 0, 'description': '驱动使能状态', 'enum': {0: 'VCU_CHASSISDRIVERENSTA_DISABLE', 1: 'VCU_CHASSISDRIVERENSTA_ENABLE'}, 'is_signed_var': False, 'len': 1, 'name': 'VCU_ChassisDriverEnSta', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|1]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-int V2adrivestafb530::VCUChassisDriverEnSta() {
+int8_t V2adrivestafb530::VCUChassisDriverEnSta() {
   Byte t0(*(bytes + 0));
   int32_t x = t0.get_byte(0, 1);
 
-  int ret =  static_cast<int>(x);
-  return ret;
+  return static_cast<int8_t>(x);
 }
 
 // config detail: {'bit': 1, 'description': '驱动控制越界提醒', 'enum': {0: 'VCU_CHASSISDIVERSLOPOVER_NORMAL', 1: 'VCU_CHASSISDIVERSLOPOVER_OVER_SLOP'}, 'is_signed_var': False, 'len': 1, 'name': 'VCU_ChassisDiverSlopover', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|1]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-int V2adrivestafb530::VCUChassisDiverSlopover() {
+int8_t V2adrivestafb530::VCUChassisDiverSlopover() {
   Byte t0(*(bytes + 0));
   int32_t x = t0.get_byte(1, 1);
 
-  int ret =  static_cast<int>(x);
-  return ret;
+  return static_cast<int8_t>(x);;
 }
 
 // config detail: {'bit': 2, 'description': '驱动模式反馈', 'enum': {0: 'VCU_CHASSISDRIVERMODESTA_SPEED_CTRL_MODE', 1: 'VCU_CHASSISDRIVERMODESTA_THROTTLE_CTRL_MODE', 2: 'VCU_CHASSISDRIVERMODESTA_RESERVE', 3: 'VCU_CHASSISDRIVERMODESTA_RESERVE'}, 'is_signed_var': False, 'len': 2, 'name': 'VCU_ChassisDriverModeSta', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|3]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-int V2adrivestafb530::VCUChassisDriverModeSta() {
+int8_t V2adrivestafb530::VCUChassisDriverModeSta() {
   Byte t0(*(bytes + 0));
   int32_t x = t0.get_byte(2, 2);
 
-  int ret =  static_cast<int>(x);
-  return ret;
+  return static_cast<int8_t>(x);;
 }
 
 // config detail: {'bit': 4, 'description': '档位状态', 'enum': {0: 'VCU_CHASSISGEARFB_NO_USE', 1: 'VCU_CHASSISGEARFB_D', 2: 'VCU_CHASSISGEARFB_N', 3: 'VCU_CHASSISGEARFB_R'}, 'is_signed_var': False, 'len': 2, 'name': 'VCU_ChassisGearFb', 'offset': 0.0, 'order': 'intel', 'physical_range': '[0|3]', 'physical_unit': '', 'precision': 1.0, 'type': 'enum'}
-int V2adrivestafb530::VCUChassisGearFb() {
+int8_t V2adrivestafb530::VCUChassisGearFb() {
   Byte t0(*(bytes + 0));
   int32_t x = t0.get_byte(4, 2);
 
-  int ret =  static_cast<int>(x);
-  return ret;
+  return static_cast<int8_t>(x);;
 }
 
 // config detail: {'bit': 8, 'description': '车速实际反馈', 'is_signed_var': True, 'len': 16, 'name': 'VCU_ChassisSpeedFb', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-50|50]', 'physical_unit': 'm/s', 'precision': 0.01, 'type': 'double'}

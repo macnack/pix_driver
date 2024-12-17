@@ -31,7 +31,7 @@ void V2achassiswheelrpmfb539::Parse() {
 
 
 // config detail: {'bit': 0, 'description': '左前轮转速', 'is_signed_var': True, 'len': 16, 'name': 'VCU_ChassisWheelRpmLf', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-2000|2000]', 'physical_unit': 'rpm', 'precision': 1.0, 'type': 'int'}
-int V2achassiswheelrpmfb539::VCUChassisWheelRpmLf() {
+int32_t V2achassiswheelrpmfb539::VCUChassisWheelRpmLf() {
   Byte t0(*(bytes + 1));
   int32_t x = t0.get_byte(0, 8);
 
@@ -39,12 +39,11 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmLf() {
   int32_t t = t1.get_byte(0, 8);
   x = ((x << 8) | t) << 16 >> 16;
 
-  int ret = x;
-  return ret;
+  return x;
 }
 
 // config detail: {'bit': 16, 'description': '右前轮转速', 'is_signed_var': True, 'len': 16, 'name': 'VCU_ChassisWheelRpmRf', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-2000|2000]', 'physical_unit': 'rpm', 'precision': 1.0, 'type': 'int'}
-int V2achassiswheelrpmfb539::VCUChassisWheelRpmRf() {
+int32_t V2achassiswheelrpmfb539::VCUChassisWheelRpmRf() {
   Byte t0(*(bytes + 3));
   int32_t x = t0.get_byte(0, 8);
 
@@ -52,12 +51,11 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmRf() {
   int32_t t = t1.get_byte(0, 8);
   x = ((x << 8) | t) << 16 >> 16;
 
-  int ret = x;
-  return ret;
+  return x;
 }
 
 // config detail: {'bit': 32, 'description': '左后轮转速', 'is_signed_var': True, 'len': 16, 'name': 'VCU_ChassisWheelRpmLr', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-2000|2000]', 'physical_unit': 'rpm', 'precision': 1.0, 'type': 'int'}
-int V2achassiswheelrpmfb539::VCUChassisWheelRpmLr() {
+int32_t V2achassiswheelrpmfb539::VCUChassisWheelRpmLr() {
   Byte t0(*(bytes + 5));
   int32_t x = t0.get_byte(0, 8);
 
@@ -65,12 +63,11 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmLr() {
   int32_t t = t1.get_byte(0, 8);
   x = ((x << 8) | t) << 16 >> 16;
 
-  int ret = x;
-  return ret;
+  return x;
 }
 
 // config detail: {'bit': 48, 'description': '右后轮转速', 'is_signed_var': True, 'len': 16, 'name': 'VCU_ChassisWheelRpmRr', 'offset': 0.0, 'order': 'intel', 'physical_range': '[-2000|2000]', 'physical_unit': 'rpm', 'precision': 1.0, 'type': 'int'}
-int V2achassiswheelrpmfb539::VCUChassisWheelRpmRr() {
+int32_t V2achassiswheelrpmfb539::VCUChassisWheelRpmRr() {
   Byte t0(*(bytes + 7));
   int32_t x = t0.get_byte(0, 8);
 
@@ -78,7 +75,6 @@ int V2achassiswheelrpmfb539::VCUChassisWheelRpmRr() {
   int32_t t = t1.get_byte(0, 8);
   x = ((x << 8) | t) << 16 >> 16;
 
-  int ret = x;
-  return ret;
+  return x;
 }
 

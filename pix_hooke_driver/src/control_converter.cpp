@@ -163,9 +163,9 @@ void ControlConverter::timerCallback()
 
   // steer
   a2v_steer_ctrl_msg.header.stamp = current_time;
-  a2v_steer_ctrl_msg.acu_chassis_steer_angle_speed_ctrl = 250;
+  a2v_steer_ctrl_msg.acu_chassis_steer_angle_speed_ctrl = 250.0f;
   a2v_steer_ctrl_msg.acu_chassis_steer_angle_target =
-    -actuation_command_ptr_->actuation.steer_cmd * param_.steering_factor;
+    static_cast<int32_t>(-actuation_command_ptr_->actuation.steer_cmd * param_.steering_factor);
   a2v_steer_ctrl_msg.acu_chassis_steer_en_ctrl = 1;
   a2v_steer_ctrl_msg.acu_chassis_steer_mode_ctrl =
     static_cast<int8_t>(ACU_CHASSISSTEERMODECTRL_FRONT_DIFFERENT_BACK);
